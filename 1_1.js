@@ -21,21 +21,32 @@ var tests = [
 				},
 				{ str: "a a",
 				  pass: false
-				} 
+				},
+				{ str: "azerbaijan",
+				  pass: false
+				},
+				{ str: "abcdefghijklmnopqrstuvzyxw",
+				  pass: true
+				}, 
 			];
 
 function main(){
+	var passed = true;
 	for(var i = 0; i< tests.length; i++){
 		var current = tests[i].str;
 		var expected = tests[i].pass;
 		if(isUnique(current) !== expected){
 			console.error("Test "+i+" failed");
+			passed = false;
 		}
 		else{
 			console.log("Test "+i+" passed");
 		}
 	}
-	console.log("All tests passed!");	
+	
+	if(passed){
+		console.log("All tests passed!");
+	}	
 }
 
 
