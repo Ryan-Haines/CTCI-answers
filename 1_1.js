@@ -1,6 +1,8 @@
 //Implement an algorithm to determine if a string has all unique characters
 //don't use any data structures besides strings
 
+var questionStr = "1.1";
+
 //tests in the form of tuples for whether or not the test should pass
 var tests = [
 				{ str: "abc",
@@ -45,7 +47,10 @@ function main(){
 	}
 	
 	if(passed){
-		console.log("All tests passed!");
+		console.log("Question "+questionStr+": All tests passed!");
+	}
+	else{
+		console.error("Question "+questionStr+": At least one test failed.");
 	}	
 }
 
